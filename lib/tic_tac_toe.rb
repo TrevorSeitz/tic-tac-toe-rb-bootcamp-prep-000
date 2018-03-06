@@ -32,7 +32,6 @@ def full?(board)
     position == "X" or position == "O"
   end
 end
-end
 
 
 def won?(board)
