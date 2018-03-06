@@ -90,7 +90,6 @@ def turn(board)
 end
 
 def input
-  # input = gets.strip
   index = input_to_index(gets.strip)
 end
 
@@ -113,6 +112,14 @@ def play(board)
   until over?(board)
     turn(board)
   end
+  # if draw?(board)
+  #   puts "Cat's Game!"
+  # else won?(board)
+  #   puts "Congratulations #{winner(board)}!"
+  # end
+end
+
+def check(board)
   if draw?(board)
     puts "Cat's Game!"
   else won?(board)
