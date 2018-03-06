@@ -121,9 +121,12 @@ def play(board)
 end
 
 def check(board)
-  if draw?(board)
-    puts "Cat's Game!"
-  else won?(board)
-    puts "Congratulations #{winner(board)}!"
-  end
+  over?(board)
+    if draw?(board)
+      puts "Cat's Game!"
+    else won?(board)
+      puts "Congratulations #{winner(board)}!"
+    end
+  play(board)
+  end  
 end
