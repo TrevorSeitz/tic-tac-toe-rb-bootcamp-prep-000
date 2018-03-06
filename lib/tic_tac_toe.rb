@@ -19,7 +19,6 @@ WIN_COMBINATIONS = [
 def full?(board)
   # counter=0
   # in_progress = true
-  # # board.all? do |position|
   # while counter < 9
   #   if !position_taken?(board, counter)
   #     in_progress = false
@@ -49,9 +48,6 @@ def draw?(board)
 end
 
 def winner(board)
-  # if won?(board).kind_of?(Array)
-  #   "Congratulations #{board[won?(board)[0]]}!"
-  # end
   if won?(board).kind_of?(Array)
     board[won?(board)[0]]
   end
@@ -84,15 +80,20 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  input = gets.strip
-  index = input_to_index(input)
+  # input = gets.strip
+  # index = input_to_index(input)
+  index = input
   if valid_move?(board, index)
     move(board, index, current_player(board))
-    # display_board(board)
   else
     puts "That is not a valid entry!"
     turn(board)
   end
+end
+
+def input
+  input = gets.strip
+  index = input_to_index(input)
 end
 
 def turn_count(board)
