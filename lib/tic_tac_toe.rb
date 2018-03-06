@@ -109,9 +109,9 @@ end
 
 # Define your play method below
 def play(board)
-  until over?(board)
+  # until over?(board)
     turn(board)
-  end
+  # end
   check(board)
   # if draw?(board)
   #   puts "Cat's Game!"
