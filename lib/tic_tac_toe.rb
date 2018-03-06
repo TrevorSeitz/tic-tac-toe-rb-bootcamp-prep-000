@@ -17,16 +17,21 @@ WIN_COMBINATIONS = [
 
 
 def full?(board)
-  counter=0
-  in_progress = true
-  # board.all? do |position|
-  while counter < 9
-    if !position_taken?(board, counter)
-      in_progress = false
-    end
-    counter += 1
+  # counter=0
+  # in_progress = true
+  # # board.all? do |position|
+  # while counter < 9
+  #   if !position_taken?(board, counter)
+  #     in_progress = false
+  #   end
+  #   counter += 1
+  # end
+  # in_progress
+
+  board.all? do |position|
+    position == "X" or position == "O"
   end
-  in_progress
+end
 end
 
 
@@ -94,7 +99,7 @@ end
 def turn_count(board)
   counter = 0
   board.each do |turn|
-    if turn == "X" or turn == "O"
+    if turn == "X" || turn == "O"
       counter += 1
     end
   end
