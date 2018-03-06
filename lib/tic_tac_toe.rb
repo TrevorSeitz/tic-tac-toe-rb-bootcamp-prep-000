@@ -128,5 +128,5 @@ def check(board)
       puts "Congratulations #{winner(board)}!"
     end
   play(board)
-  end  
+  end
 end
