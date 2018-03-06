@@ -90,8 +90,8 @@ def turn(board)
 end
 
 def input
-  input = gets.strip
-  index = input_to_index(input)
+  # input = gets.strip
+  index = input_to_index(gets.strip)
 end
 
 def turn_count(board)
